@@ -21,13 +21,14 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      descript: {
+      description: {
         allowNull: false,
         type: Sequelize.STRING,
       },
       status: {
         allowNull: false,
         type: Sequelize.STRING,
+        defaultValue: 'FOR_SALE',
       },
       createdAt: {
         allowNull: false,
