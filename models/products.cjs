@@ -28,13 +28,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING,
       },
-      descript: {
+      description: {
         allowNull: false,
         type: DataTypes.STRING,
       },
       status: {
         allowNull: false,
         type: DataTypes.STRING,
+        defaultValue: 'FOR_SALE',
       },
       createdAt: {
         allowNull: false,
