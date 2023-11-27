@@ -1,9 +1,6 @@
 @host = http://localhost:3000/api/products
 
-@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMDgzNDgyNiwiZXhwIjoxNzAwODc4MDI2fQ.XyZygaee_9L113Sw4ymDyfTc-RcJyg9jM_TRHg360VM
-
-### 상품 생성
-POST {{host}}
+@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMTA3NjM2OSwiZXhwIjoxNzAxMTE5NTY5fQ.DTnMI6E-L2tzwi5pYJDnJT_Y6jekR_stGCbVNY7GTd8
 Content-Type: application/json
 Authorization: Bearer {{accessToken}}
 
@@ -11,4 +8,13 @@ Authorization: Bearer {{accessToken}}
    "title": "킨더조이",
    "description": "장난감이 들어있는 초콜렛"
 }
+
+### 상품 목록 조회
+GET {{host}}
+# ?sort=asc
+
+### 상품 상세 조회 
+GET {{host}}/1
+
+
 
