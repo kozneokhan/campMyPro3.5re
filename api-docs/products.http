@@ -1,6 +1,9 @@
 @host = http://localhost:3000/api/products
 
-@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMTA3NjM2OSwiZXhwIjoxNzAxMTE5NTY5fQ.DTnMI6E-L2tzwi5pYJDnJT_Y6jekR_stGCbVNY7GTd8
+@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMTA4OTgzNSwiZXhwIjoxNzAxMTMzMDM1fQ.TRANiXjljGkWrTfxHcBgY4PHlS53EQNJXH7snAd5aqA
+
+### 상품 생성
+POST {{host}}
 Content-Type: application/json
 Authorization: Bearer {{accessToken}}
 
@@ -17,4 +20,28 @@ GET {{host}}
 GET {{host}}/1
 
 
+### 상품 수정
+PUT {{host}}/6
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
 
+{
+   "title": "페레로로쉐",
+   "description": "중독성 쩌는 초콜릿",
+   "status": "SOLD_OUT"
+}
+
+### 상품 수정
+PUT {{host}}/6
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+   "title": "페레로로쉐"
+}
+
+
+### 상품 삭제
+DELETE  {{host}}/6
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
